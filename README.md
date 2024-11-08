@@ -1,4 +1,4 @@
 # RAGalaxy
 
 ![RAGalaxy](./assets/RAGalaxy_1.png)
-每一份信息就如同浩瀚宇宙中的一颗星辰，而 "RAGalaxy" 则象征着通过 RAG 技术，将这些信息汇聚成结构化且意义深远的智慧体系，宛若星系中璀璨交汇的星河。同时，这一名称也彰显了我们追求知识与创新的雄心，期待在信息化的挑战中开拓出属于人类智慧的璀璨星河。
+Every piece of information is like a star in the vast universe, while "RAGalaxy" symbolizes the ability of RAG technology to connect these pieces of information into a structured and profoundly meaningful system of wisdom, akin to the brilliant convergence of star streams within a galaxy. At the same time, this name also reflects our ambition to pursue knowledge and innovation, as we strive to transform the challenges of the information age into a radiant galaxy of human wisdom.
