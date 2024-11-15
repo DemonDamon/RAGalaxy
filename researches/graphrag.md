@@ -14,7 +14,7 @@ GraphRAG是一个由微软开发的开源项目，专注于图形增强生成（
 
 GraphRAG的整体架构由多个模块组成，每个模块负责特定的功能：
 
-![](https://files.mdnice.com/user/9391/b847a7a0-c700-41ab-8cf0-2949923637d8.png)
+![](https://files.mdnice.com/user/9391/ef283eec-370f-4585-92e5-f201213cb460.svg)
 
 ```
 @startuml
