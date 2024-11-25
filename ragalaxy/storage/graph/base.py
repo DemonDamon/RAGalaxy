@@ -1,32 +1,40 @@
-from typing import List, Dict, Any, Optional
-from ..base import BaseStorage
+from typing import List, Dict, Any
+from abc import ABC, abstractmethod
 
-class BaseGraphStorage(BaseStorage):
+class BaseGraphStore(ABC):
     """图存储基类"""
     
+    def __init__(self, config: Dict[str, Any]):
+        self.config = config
+        
     @abstractmethod
-    def add_node(self, node_id: str, properties: Dict[str, Any]) -> bool:
-        """添加节点"""
+    async def connect(self) -> bool:
+        """连接数据库"""
         pass
         
     @abstractmethod
-    def add_edge(self, 
-                 from_node: str, 
-                 to_node: str, 
-                 edge_type: str,
-                 properties: Optional[Dict[str, Any]] = None) -> bool:
-        """添加边"""
+    async def disconnect(self) -> bool:
+        """断开连接"""
         pass
         
     @abstractmethod
-    def get_neighbors(self, 
-                     node_id: str, 
-                     edge_type: Optional[str] = None,
-                     max_depth: int = 1) -> List[Dict[str, Any]]:
-        """获取邻居节点"""
+    async def add_entities(self, entities: List[Dict]) -> bool:
+        """添加实体"""
         pass
         
     @abstractmethod
-    def query(self, cypher: str) -> List[Dict[str, Any]]:
-        """执行图查询"""
+    async def add_relations(self, relations: List[Dict]) -> bool:
+        """添加关系"""
         pass
+        
+    @abstractmethod
+    async def query(self, cypher: str) -> List[Dict]:
+        """执行查询"""
+        pass
+        
+    async def __aenter__(self):
+        await self.connect()
+        return self
+        
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self.disconnect()
