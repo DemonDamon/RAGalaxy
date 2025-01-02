@@ -700,7 +700,7 @@ end note
 
 
 ### 1.3 核心功能流程
-![alt text](image-3.png)
+![alt text](image-1.png)
 
 ```plantuml
 @startuml Core Flow
